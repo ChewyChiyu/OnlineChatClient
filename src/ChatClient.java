@@ -97,8 +97,8 @@ public class ChatClient extends JPanel{
 
 
 		String whatTheUserEntered = JOptionPane.showInputDialog("Please enter a username");
-		if (whatTheUserEntered == null) {
-			userName = "Anon"+(Math.random()*1000+100);
+		if (whatTheUserEntered == "" || whatTheUserEntered == null) {
+			userName = "Anon"+(int)(Math.random()*100);
 			sendToServer(DataPackageTranslator.enterCode);
 
 		}else{
